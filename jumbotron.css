@@ -1,0 +1,86 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 2rem;
+}
+
+.jumbotron-wearabletech {
+  background-image: url("images/gadgets.jpg");
+  background-size: 100%;
+}
+
+.jumbotron-cognitivecomputingsystem {
+  background-image: url("images/tech.jpg");
+  background-size: 100%;
+}
+
+.jumbotron-healthapps {
+  background-image: url("images/healthappsbanner.jpg");
+  background-size: 100%;
+}
+
+.jumbotron-roboticsurgery {
+  background-image: url("images/roboticsurgery.png");
+  background-size: 100%;
+}
+
+.jumbotron-typesofrobots {
+  background-image: url("images/typesofrobots.png");
+  background-size: 100%;
+}
+
+.jumbotron-gadgetsforyourphone {
+  background-image: url("images/alcohoot.png");
+  background-size: 100%;
+}
+
+.centerImage {
+  text-align: center;
+  display: block;
+}
+
+.bg-1 {
+      background-color: white;
+}
+
+.bg-2 {
+      background-color: #292b2c;
+      color: white;
+}
+
+.bg-3 {
+      background-color: white;
+}
+
+.bg-4 {
+      background-color: #292b2c;
+      color: white;
+}
+
+.container-fluid {
+      padding-top: 50px;
+      padding-bottom: 50px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.dropdown-menu {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+h2 {
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 300;
+}

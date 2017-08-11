@@ -1,0 +1,47 @@
+.jumbotron {
+  padding-top: 70px;
+  color: black;
+  height: 290px;
+  margin-bottom: 0px;
+}
+.jumbotron-gadgets {
+  background-image: url("images/gadgets.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.centerImage {
+  text-align: center;
+  display: block;
+}
+
+.bg-1 {
+      background-color: white;
+}
+
+.bg-2 {
+      background-color: #222222;
+      color: white;
+}
+
+.bg-3 {
+      background-color: white;
+}
+
+.bg-4 {
+      background-color: #222222;
+      color: white;
+}
+
+.container-fluid {
+      padding-top: 50px;
+      padding-bottom: 50px;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}

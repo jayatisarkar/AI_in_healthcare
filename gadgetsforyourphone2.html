@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap/favicon.ico">
+
+    <title>Wearable technology</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">AI in Healthcare</a>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SMART ASSISTANTS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="cognitivecomputingsystems.html">Cognitive computing systems</a>
+              <a class="dropdown-item" href="healthapps.html">Health monitoring & diagnosis apps</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">INTELLIGENT ROBOTS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="typesofrobots.html">Types of robots</a>
+              <a class="dropdown-item" href="roboticsurgery.html">Robotic surgery</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HEALTHCARE GADGETS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="wearabletechnology.html">Wearable technology</a>
+              <a class="dropdown-item" href="gadgetsforyourphone.html">Gadgets for your phone</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="main-nav" class="jumbotron jumbotron-gadgetsforyourphone">
+      <div class="container">
+        <h1 class="display-3 text-center">Gadgets for your phone</h1>
+        <p class="text-center">An introduction to few of the many devices available for us to keep our health under check.</p>
+        <center><a href="#" class="scroll-link btn btn-info" data-id="tinke">Tinké</a>
+        <a href="#" class="scroll-link btn btn-info" data-id="dario">Dario</a>
+        <a href="#" class="scroll-link btn btn-info" data-id="alcohoot">Alcohoot</a>
+        <a href="#" class="scroll-link btn btn-info" data-id="alivecor">AliveCor</a></center>
+      </div>
+    </div>
+
+<div id="tinke">
+    <div class="container-fluid bg-1 text-center">
+      <h2 class="text-center">Tinké </h2>
+            <center><img src="images/tinke.jpg" class="img-responsive" alt="Tinké" style="width: 50%; height: 50%"></center>
+        <p>
+      <h4 class="text-center">What is Tinké?</h3>
+        <p>Tinké is a health monitor that allows users to see their heart rates, respiratory rates, blood oxygen levels and heart rate variability.<sup>[1]</sup> Instead of using the traditional transmission technologies, it uses reflective technologies. The device is composed of a data acquisition studio and a comprehensive set of signal processing algorithms that treat the signals including background noises, ambient light and motion artefacts. </p>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Read more</button>
+        <div id="demo1" class="panel-collapse collapse">
+          <p>
+      <h4 class="text-center">What is the principle behind the working of this device?</h3>
+        <p><sup>[1]</sup> This device uses the principle behind photo-plethysmography (PPG) sensors, that optically detect blood volume changes in the microvascular bed of the tissue. Information on the cardiovascular system is provided by the changes in light intensity, which are associated with small variations in blood perfusion of the tissue. The non-covered reflectance mode PPG sensor system of the monitor contains a light source and a detector red and infrared light-emitting diodes (LEDs) for spot monitoring. Whereas for continuous monitoring, the sensor system uses green LEDs as it provides stronger PPG signals required due to a change of location that is to be measured (from the fingertip to the wrist).</p>
+      <h4 class="text-center">How does Tinké calculate the heart rate?</h3>
+        <p><sup>[2]</sup>The main idea used by this device to measure heart rate is to detect variations in the skin colour of the finger and brightness that occur due to blood pulsation through the phone’s camera. The variations are then detected by analysing the average red component values of the frames taken by the camera. The input signals are obtained by the time series of average red component values of the frames.</p>
+        <img src="images/tinkegraph.jpeg" alt="Tinke" style="width: 35%; height: 35%" class="pull-right">
+        <p>To calculate the heart rate, this gadget calculates the average distance between adjacent peaks of the signals. The algorithm consists of following steps: 1) Signal differentiation - It enables the signal’s average reach close to zero and get rid of the signal’s baseline rising up or falling down that occur, when the light levels in our surroundings changes. So after differentiation it is convenient to compare the height of the peaks. 2) Next sets of p highest peaks of the signal are gathered and p changes from 5 to n, which is the maximum number of observable peaks.  For measurement n is considered equal to 20 for 10 seconds.  3) After 10 seconds the variances of distances between adjacent peaks for each set of peaks gathered in the step before is calculated. Set of peaks are chosen in such a way that the variance value is minimum in the series of variances, if the minimum variance value is reached for maximum number of peaks (n). 4) In this step the appropriate set of peaks is chosen on the basis of the variance value, calculated on the previous step, should be minimum among other variances. 5) Heart rate calculation - Finally, the mean value of distances between adjacent peaks for the set chosen on the previous step is calculated. The frame rate of the measurement is then multiplied by 60 and divided by this mean value which gives the heart rate in bpm for current measurement.
+        <br/><a href="#" class="scroll-top back-to-top">&uarr;</a> </p>
+        <center><a href="#tinkerefs" class="btn btn-info" data-toggle="collapse">References</a></center>
+        <p>
+        <div id="tinkerefs" class="collapse">
+        <div class="list-group">
+        <a href="https://www.zensorium.com/research#research" class="list-group-item list-group-item-action">1.    Zensorium. Research. (accessed February 2017)</a>
+        <a href="https://fruct.org/publications/fruct13/files/Lau.pdf" class="list-group-item list-group-item-action">2.   Denis Laure, Ilya Paramonov. Improved Algorithm for Heart Rate Measurement Using Mobile Phone Camera. (accessed February 2017) </a>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+
+    <div id="dario">
+    <div class="container-fluid bg-2 text-center">
+    
+        <h2 class="text-center" id="dario"> Dario </h2>  
+        <center><img src="images/dario.jpg" class="img-responsive" alt="Dario" style="width: 40%; height: 40%"></center>
+          <p>
+        <h4 class="text-center">What is Dario?</h3>
+        <p><p><sup>[1]</sup> Dario is a pocket-sized, portable glucose monitoring system which has glucometer (glucose meter) that connects to the audio port of a smartphone. It uses an app that automatically opens once the device is connected to the user's phone. After applying one's blood sample to the meter, the blood glucose readings automatically appear and sync to the app .The app also has the ability to log any additional information such as insulin dosing, activity, and tagging.</p>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Read more</button>
+        <div id="demo2" class="panel-collapse collapse">
+          <p> <p> <img src="images/dariograph.jpg" alt="Dario" style="width: 25%; height: 25%" class="pull-right">
+        <h4 class="text-center">How does Dario estimate the glucose concentration?</h3>
+        <p><p><sup>[2]</sup> Even though the main goal in diabetes management is to control the blood glucose near euglycemic levels, continuous glucose sensors output a signal that is proportional to the interstital glucose value. The device runs on the main idea of a calibration algorithm that converts this raw sensor signal, which is typically in nano amps, to a blood glucose estimate. A simple linear equation: <math xmlns="http://www.w3.org/1998/Math/MathML" id="m1" overflow="scroll">
+  <mrow>
+    <mi>y</mi>
+    <mo>=</mo>
+    <mi>m</mi>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>b</mi>
+    <mo>,</mo>
+  </mrow>
+</math> is used in most cases where x is the independent variable (that is normally considered as the blood glucose level) and y is the dependent variable (normally the sensor current in nano amps). If we assume that the y intercept is known (when b = 0), then to find the sensor sensitivity (or slope, m) a one-point calibration can be used , where <math xmlns="http://www.w3.org/1998/Math/MathML" id="m2" overflow="scroll">
+  <mrow>
+    <mi>m</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mrow>
+        <mi>y</mi>
+        <mo>&#x2212;</mo>
+        <mi>b</mi>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mo>/</mo>
+    <mi>x</mi>
+  </mrow>
+</math> and only one of the sensor signal (y) – blood glucose (x) pair is used. On the other hand, a two-point calibration system is based on the two sensor/glucose pairs, where the subscripts 1 and 2 represent the first and second calibration data points, respectively, <math xmlns="http://www.w3.org/1998/Math/MathML" id="m1" overflow="scroll">
+  <mrow>
+   <msub> 
+    <mi>y</mi>
+    <mi>1</mi>
+    </msub>
+    <mo>=</mo>
+    <mi>m</mi>
+    <msub>
+    <mi>x</mi>
+    <mi>1</mi>
+    </msub>
+    <mo>+</mo>
+    <mi>b</mi>
+  </mrow>
+</math> 
+and <math xmlns="http://www.w3.org/1998/Math/MathML" id="m1" overflow="scroll">
+  <mrow>
+   <msub> 
+    <mi>y</mi>
+    <mi>2</mi>
+    </msub>
+    <mo>=</mo>
+    <mi>m</mi>
+    <msub>
+    <mi>x</mi>
+    <mi>2</mi>
+    </msub>
+    <mo>+</mo>
+    <mi>b</mi>
+  </mrow>
+</math>. 
+</p>
+  <p> The equations <math xmlns="http://www.w3.org/1998/Math/MathML" id="m4" overflow="scroll">
+  <mrow>
+    <mtable>
+      <mtr>
+        <mtd>
+          <mrow>
+            <mi>m</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <msub>
+                      <mi>y</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mo>&#x2212;</mo>
+                    <msub>
+                      <mi>y</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <msub>
+                      <mi>x</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mo>&#x2212;</mo>
+                    <msub>
+                      <mi>x</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </mtd>
+        </mtr>
+        </mtable>
+        </mrow>
+        </math> and <math xmlns="http://www.w3.org/1998/Math/MathML" id="m1" overflow="scroll">
+  <mrow>
+    <mi>b</mi>
+    <mo>=</mo>
+    <msub>
+    <mi>y</mi>
+    <mi>2</mi>
+    </msub>
+    <mo>-</mo>
+    <mi>m</mi>
+    <msub>
+    <mi>x</mi>
+    <mi>2</mi>
+  </mrow>
+</math> are used to estimate the slope and intercept respectively. Moreover, the linear regression can be used to fit slope and intercept to data when multiple data points are available. The equation has the form <math xmlns="http://www.w3.org/1998/Math/MathML" id="m5" overflow="scroll">
+  <mrow>
+    <msub>
+      <mi>y</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>=</mo>
+    <mi>m</mi>
+    <msub>
+      <mi>x</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>+</mo>
+    <mi>b</mi>
+    <mo>+</mo>
+    <msub>
+      <mi>e</mi>
+      <mi>i</mi>
+    </msub>
+    <mo>,</mo>
+  </mrow>
+</math> where the subscript i represents the ith data point and the assumption made is that there is uncertainty in the output measurement.The slope
+  (m) and intercept (b) are estimated using the standard linear regression techniques, that minimize the sum of the squares of the errors (where <math xmlns="http://www.w3.org/1998/Math/MathML" id="im1" overflow="scroll">
+  <mrow>
+      <msub>
+          <mover accent="true">
+            <mi>y</mi>
+            <mo>&#x2C6;</mo>
+          </mover>
+            <mi>i</mi>
+      </msub>
+            <mo>=</mo>
+            <mi>m</mi>
+      <msub>
+            <mi>x</mi>
+            <mi>i</mi>
+      </msub>
+            <mo>+</mo>
+            <mi>b</mi>
+  </mrow>
+</math>) over N data points : <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" id="m6" overflow="scroll">
+<mrow>
+  <munder>
+    <mrow>
+      <mi>min</mi>
+      <mo>&#x2061;</mo>
+    </mrow>
+    <mrow>
+      <mi>m</mi>
+      <mo>,</mo>
+      <mi>b</mi>
+    </mrow>
+  </munder>
+  <mstyle displaystyle="true">
+    <munderover>
+      <mo mathvariant="bold">&#x2211;</mo>
+      <mrow>
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>N</mi>
+    </munderover>
+    <mrow>
+      <msubsup>
+        <mi>e</mi>
+        <mi>i</mi>
+        <mn>2</mn>
+      </msubsup>
+    </mrow>
+  </mstyle>
+  <mo>=</mo>
+  <munder>
+    <mrow>
+      <mi>min</mi>
+      <mo>&#x2061;</mo>
+    </mrow>
+    <mrow>
+      <mi>m</mi>
+      <mo>,</mo>
+      <mi>b</mi>
+    </mrow>
+  </munder>
+  <mstyle displaystyle="true">
+    <munderover>
+      <mo mathvariant="bold">&#x2211;</mo>
+      <mrow>
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>N</mi>
+    </munderover>
+    <mrow>
+      <msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>y</mi>
+                <mi>i</mi>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mover accent="true">
+                  <mi>y</mi>
+                  <mo>&#x2C6;</mo>
+                </mover>
+                <mi>i</mi>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+      <mo>.</mo>
+    </mrow>
+  </mstyle>
+</mrow>
+</math> Once the sensor has been calibrated, the estimated glucose concentration is obtained from the sensor current from the equation : <math xmlns="http://www.w3.org/1998/Math/MathML" id="m7" overflow="scroll">
+  <mrow>
+    <mover accent="true">
+      <mi>x</mi>
+      <mo>&#x2C6;</mo>
+    </mover>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>y</mi>
+            <mo>&#x2212;</mo>
+            <mi>b</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+      <mi>m</mi>
+    </mfrac>
+    <mo>.</mo>
+  </mrow>
+</math>
+  <br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+          <center><a href="#dariorefs" class="btn btn-default" data-toggle="collapse">References</a></center>
+    <p>
+    <div id="dariorefs" class="collapse">
+    <div class="list-group">
+        <a href="https://mydario.com/wp-content/uploads/2015/09/LabStyles-Dario-Changes-Two-Type-1-Diabetics-Lives-PersonaltechMD.pdf" class="list-group-item list-group-item-action">1.    Kelly Teal. LabStyle's DARIO Changes Two Type1 Diabetics' Lives. (accessed February 2017)</a>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2864177/" class="list-group-item list-group-item-action">2.   B. Wayne Bequette. Continuous Glucose Monitoring: Real-Time Algorithms for Calibration, Filtering, and Alarms.  (accessed February 2017)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="alcohoot">
+    <div class="container-fluid bg-3 text-center">
+    
+        <h2 class="text-center" id="alcohoot">Alcohoot</h2>
+        <center><img src="images/alcohoot.jpg" class="img-responsive" alt="Alcohoot" style="width: 40%; height: 40%"></center>
+          <p>
+        <h4 class="text-center">What is Alcohoot? </h3>
+        <p>Alcohoot is a portable breathalyser, powered by a rechargeable battery to measure your blood alcohol levels with the accompanying app. <sup>[1]</sup> It can be connected to an app when the gadget is connected to the phone through the headphone jack. A tube is attached to the device and once the app recognises that the device is connected to the smartphone, the user can blow into the tube. The app then returns the result of your BAC (Blood Alcohol Concentration). </p>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Read more</button>
+        <div id="demo3" class="panel-collapse collapse">
+          <p>
+        <h4 class="text-center">How does Alcohoot work?</h3>
+        <p><sup>[1]</sup> The Alcohoot breathalyser uses the platinum electrochemical fuel cell technology that ensures an accuracy variation of +/- 0.01% .<sup>[2]</sup> In this process, the fuel cell sensors are dependent on an electrochemical process that works by oxidising the alcohol in a breath sample. The BAC is then determined by an electrical current, produced by oxidisation, that the breathalyser measures. The strength of the current represents the volume of alcohol present in the breath sample. </p>
+        <img src="images/alcohootapp.png" alt="Alcohoot" style="width: 35%; height: 35%" class="pull-right">
+        <h4 class="text-center">What are the additional features of the accompanying app?</h3>
+        <p>The Alcohoot app lets you track your BAC level results and hence helps you check your limits. <sup>[3]</sup> The app is very user friendly, as it logs and graphs your readings, has a map integration that can point the user to the nearest restaurant for needed sustenance, and even allows one to summon a taxi from the app.</p>
+   <p>During the development of this app many challenges, such as decoding and encoding  algorithms that accept data in the binary form from the monitor through the smartphone audio port, were overcome. Additionally, the app provides integration with third-party applications such as Google Maps and Google also places API to enable easy navigation to nearby restaurants and access to UBER services.
+   <br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+        <center><a href="#alcohootrefs" class="btn btn-default" data-toggle="collapse">References</a></center>
+   <p>
+   <div id="alcohootrefs" class="collapse">
+      <div class="list-group">
+        <a href="http://www.maplin.co.uk/p/alcohoot-smartphone-breathalyser-a00ut" class="list-group-item list-group-item-action">1.   Maplin. Review. (accessed February 2017)</a>
+        <a href="https://www.alcolizer.com/wp-content/uploads/2016/03/13152_WhitePaper_FuelCellTech_LR.pdf" class="list-group-item list-group-item-action">2.    Laddie Nadilo. The Use of Fuel Cell Technology in Breathalysers. (accessed February 2017)</a>
+        <a href="https://www.pastemagazine.com/articles/2015/07/the-alcohoot-smartphone-breathalyzer-is-your-elect.html" class="list-group-item list-group-item-action">3.   John Verive. The Alcohoot Smartphone Breathalyzer Is your Electronic Drinking Buddy. (accessed February 2017)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="alivecor">
+    <div class="container-fluid bg-4 text-center">
+   
+          <h2 class="text-center" id="alivecor"> AliveCor </h2>
+        <center><img src="images/alivecor.jpeg" class="img-responsive" alt="AliveCor" style="width: 40%; height: 40%"></center>
+<p>
+        <h4 class="text-center">What is AliveCor?</h3>
+        <p><sup>[1]</sup> AliveCor is a smartphone case that can take ECG readings. AliveCor offers quick results using machine learning algorithms and provides consultations with board-certified cardiologists which makes it easier to know whether one's heart rhythm is normal or in atrial fibrillation.</p>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">Read more</button>
+        <div id="demo4" class="panel-collapse collapse">
+          <p>
+        <h4 class="text-center">How does AliveCor work?</h3>
+        <p><sup>[2]</sup>The gadget provides a portable electrocardiogram (ECG) recorder. The AliveECG app can work along with the monitor which makes it possible to analyse the ECG recordings and send them to a healthcare professional for interpretation. The Provider Dashboard software provides the professionals access to the information sent to them.</p>
+        <img src="images/alivecorResults.jpg" alt="AliveCor" style="width: 30%; height: 30%" class="pull-right"><p>
+  <p><sup>[3]</sup>After the reading has been taken by the AliveCor Heart Monitor, it is sent wirelessly through a high frequency sound transmission to the mobile device, where it can be viewed using the AliveECG app. The data is then stored from the monitor and analysed by the app. The ECG trace is displayed on the screen which contains a measure of heart rate, and the in‑built software notifies the patient if their reading is normal or if AF (Atrial Fibrillation) has been detected due to an irregularity in the reading.
+  <br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+        <center><a href="#alivecorrefs" class="btn btn-default" data-toggle="collapse">References</a></center>
+  <p>
+    <div id="alivecorrefs" class="collapse">
+      <div class="list-group">
+        <a href="https://www.alivecor.com/en/">1.   O'Donnell, Martin J et al. 90% Of Strokes Can Be Prevented. (accessed February 2017)</a>
+        <a href="https://www.fastcoexist.com/1678837/coming-soon-a-hospital-quality-ekg-on-your-smartphone">2.   Ariel Schwartz. Coming Soon: A Hospital-Quality EKG On Your Smartphone. (accessed February 2017)</a>
+        <a href="https://www.nice.org.uk/advice/mib35/chapter/technology-overview">3.  Medtech innovation briefing [MIB35]. AliveCor Heart Monitor and AliveECG app (Kardia Mobile) For Detecting Atrial Fibrillation. (accessed February 2017)</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Scrolling function -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> 
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+     $(document).ready(function() {
+    // navigation click actions 
+    $('.scroll-link').on('click', function(event){
+    event.preventDefault();
+    var sectionID = $(this).attr("data-id");
+    scrollToID('#' + sectionID, 1000);
+    });
+    // scroll to top action
+      $('.scroll-top').on('click', function(event) {
+      event.preventDefault();
+      $('html, body').animate({scrollTop:0}, 'slow');     
+  });
+ 
+});
+// scroll function
+function scrollToID(id, speed){
+  var offSet = 50;
+  var targetOffset = $(id).offset().top - offSet;
+  var mainNav = $('#main-nav');
+  $('html,body').animate({scrollTop:targetOffset}, speed);
+  if (mainNav.hasClass("open")) {
+    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+    mainNav.removeClass("open");
+  }
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+</body>
+</html>

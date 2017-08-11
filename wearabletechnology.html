@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap/favicon.ico">
+
+    <title>Wearable technology</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">AI in Healthcare</a>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SMART ASSISTANTS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="cognitivecomputingsystems.html">Cognitive computing systems</a>
+              <a class="dropdown-item" href="healthapps.html">Health monitoring & diagnosis apps</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">INTELLIGENT ROBOTS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="typesofrobots.html">Types of robots</a>
+              <a class="dropdown-item" href="roboticsurgery.html">Robotic surgery</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HEALTHCARE GADGETS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="wearabletechnology.html">Wearable technology</a>
+              <a class="dropdown-item" href="gadgetsforyourphone.html">Gadgets for your phone</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="main-nav" class="jumbotron jumbotron-wearabletech">
+      <div class="container">
+        <h1 class="display-3 text-center">Wearable technology</h1>
+        <p class="text-center">The wearable technology revolution is taking place right before our eyes, so we'll take you through a few of the most popular and innovative products on the market.</p>
+        <center><a class="scroll-link btn btn-info" href="#" data-id="fitbit">Fitbit</a>
+        <a class="scroll-link btn btn-info" href="#" data-id="healthpatch">Healthpatch MD</a>
+        <a class="scroll-link btn btn-info" href="#" data-id="helius">Helius</a>
+        <a class="scroll-link btn btn-info" href="#" data-id="google">Google Smart Contact Lenses</a></center>
+      </div>
+    </div>
+
+   <div id="fitbit">
+    <div class="container-fluid bg-1 text-center">
+      <h2 class="text-center" id="fitbit">Fitbit</h2>
+      <center><img src="images/fitbit.png" class="img-responsive" alt="Fitbits" style="width: 40%; height: 40%"></center>
+        <p>
+      <h4 class="text-center">What is a Fitbit?</h3>
+        <p>Fitbit watches are one the most popular forms of wearable healthcare technology. They are wireless activity trackers that measure a wide range of data including heart rate, quality of sleep, number of steps walked and steps climbed. Alongside the watches, Fitbit provides a mobile app and website that can be used without the tracker to allow users to track their diet and activities and set short and long-term goals. </p>
+        <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#demo1">Read more</button>
+        <div id="demo1" class="panel-collapse collapse">
+          <p>
+      <h4 class="text-center">How does a Fitbit work?</h3>
+        <p>Fitbit trackers work using a three-axis accelerometer to track motion. <sup>[3]</sup> An accelerometer is an electromechanical device which measures the acceleration of a moving object when attached to it. It works in many different ways, two of which involve the piezoelectric effect and the capacitance sensor. <sup>[2]</sup> The most common form of accelerators use piezoelectric effect and microscopic crystal structures which are put under stress as a result of accelerative forces. From this stress, the crystals produce a voltage and the accelerometer translates to voltage to determine the velocity and orientation of the moving body.</p>
+        <p>The capacitance accelerometer detects and records vibrations produced on a device. The components of the accelerometer are capable of storing capacitance and when they are moved, the generated capacitance is sensed by the accelerometer’s sensors and translated into voltage for interpretation by the accelerometer. Most accelerometers are composed of multiple axes to allow the accelerometer to measure motion in any direction, allowing for more precise measurements that those with fewer axes.</p>
+      <h4 class="text-center">How does a Fitbit count steps?</h3>
+        <p>Fitbit has a unique algorithm for step counting that looks for patterns in a person’s motion that suggests they are walking and determines whether the motion’s size is large enough by setting a threshold. If the motion and acceleration measurement meet this threshold, the movement counts as a step. <sup>[3]</sup> While Fitbit’s algorithm is not publicly available, step counting algorithms generally work as follows.</p>
+        <img src="images/fitbitgraph.png" alt="Fitbits" style="width: 25%; height: 25%" class="pull-right">
+        <p>As a three-axis accelerometer is used, three measurements (x, y, z) are taken corresponding to vertical, forward and side acceleration of a person. <sup>[1]</sup> Regardless of which way a person is moving, at least one axis will have relatively large period acceleration changes so peak detection and a dynamic threshold-decision algorithm for acceleration are applied on all three axes in order to detect a cycle of walking. The dynamic threshold-decision algorithm works by  continuously updates the maximum and minimum values of the three-axis acceleration every set number of samples. The average value (maximum + minimum)/2 is called the dynamic threshold level and this level is used to decide whether steps have been taken.</p>
+        <p>The peak detection algorithm works by calculating the steps from the x-, y- or z- axis depending on which axis has the largest change in acceleration. <sup>[1]</sup> However, the change in acceleration must meet a certain threshold value or they will be discarded. There are many other methods used to avoid over or undercounting such as the use of a time window to discard invalid vibrations that fall outside of a certain time interval (too fast or too slow). By means of an algorithm similar to this, Fitbit have become the biggest-selling maker of activity trackers in the world.<br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+        <center><a href="#fitbitrefs" class="btn btn-outline-info" data-toggle="collapse">References</a></center>
+        <p>
+        <div id="fitbitrefs" class="collapse">
+          <div class="list-group">
+            <a href="http://www.analog.com/media/en/analog-dialogue/volume-44/number-2/articles/pedometer-design-3-axis-digital-acceler.pdf" class="list-group-item list-group-item-action text-left">1.	Neil Zhao. Full-Featured Pedometer Design Realized with 3-Axis Digital Accelerometer. Analog Dialogue 2010; 44(06) (accessed February 2017)</a>
+            <a href="http://www.livescience.com/40102-accelerometers.html" class="list-group-item list-group-item-action">2.	Ryan Goodrich. Accelerometers: What They Are & How They Work. (accessed February 2017)</a>
+            <a href="https://help.fitbit.com/articles/en_US/Help_article/1143" class="list-group-item list-group-item-action">3.	Fitbit. How does my tracker count steps? (accessed February 2017)</a>
+            <a href="http://www.fitbit.co.za/" class="list-group-item list-group-item-action">Photo: fitbit.co.za</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+
+    <div id="healthpatch">
+    <div class="container-fluid bg-2 text-center">
+        <h2 class="text-center" id="healthpatch">HealthPatch MD</h2>
+        <img src="images/healthpatch.png" class="img-responsive" alt="HealthPatch MD" style="width: 30%; height: 30%">
+          <p>
+        <h4 class="text-center">What is the HealthPatch MD?</h3>
+        <p>One of the latest developments in wearable technology is the HealthPatch MD, a bionic band-aid consisting of a variety of sensors that monitor heart rate, respiration, temperature, steps taken, sleep cycle, stress levels and whether the user has fallen or become incapacitated. <sup>[1]</sup> It is the first medical technology device of its kind as this small, unobtrusive patch worn on the chest is capable of taking clinical-grade biometric measurements. It also supports the treatment of a wide range of diseases and conditions by allowing healthcare professionals access to 24-hour, real-time physiological data. <sup>[2]</sup> The patch pairs over bluetooth with a mobile device for Wi-Fi connectivity so patients and doctors can access the encrypted data through a cloud platform provided by LifeWatch, a cardiac monitoring partner company.</p>
+        <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#demo2">Read more</button>
+        <div id="demo2" class="panel-collapse collapse">
+          <p>
+        <h4 class="text-center">How does the HealthPatch MD work?</h3>
+        <p>The patch works by using the latest sensors and electronics combined with Vital Connect’s SensorFusion algorithms which process 30,000 data points a minute to produce accurate measurements. <sup>[3]</sup> These algorithms analyse several biometrics to produce far more accurate and significant measurements than those that would be any to be generated by considering any individual biometric alone. These biometrics include stress, sleep quality, calories burned and contextual heart rate among others.</p>
+        <h4 class="text-center">What is inside the HealthPatch MD?</h3>
+        <p>The device is consists of two main components: a disposable adhesive patch containing the ECG electrodes and battery, and a reusable electronics module that contains the embedded processor, tri-axial accelerometer (aids detection of posture, steps and falls) and BLE transceiver (used to pair the patch with mobile devices). <sup>[4]</sup> The data from the tri-axial accelerometer is used in performing the patch’s unique fall detection function.</p>
+        <h4 class="text-center">How does the HealthPatch MD detect falls?</h3>
+        <p>One of the main features of the fall detection algorithm is identifying whether the subject is in a horizontal position after an impact. <sup>[5]</sup> As well as this, the subject must have a low activity level for several seconds after a possible fall in order to reduce the number of false positive. This activity level is determined by calculating a moving average of the acceleration vector. The horizontal position is determined by calculating the angle of the acceleration vector soon after impact with an acceleration vector obtained when the person was standing. This angle can only be calculated with the use of a calibration procedure which can be achieved by measuring the acceleration vector of the person as they are walking. The vector is called the calibration vector. The difference between this vector and the vector after the possible impact determines whether the horizontal position criterion is satisfied which in turns determines whether the person has or has not fallen.<br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+<p>
+  <iframe src="https://player.vimeo.com/video/80814795" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/80814795">Vital Connect Introduction</a> from <a href="https://vimeo.com/user22683211">Vital Connect, Inc.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>
+        <center><a href="#mdrefs" class="btn btn-outline-info" data-toggle="collapse">References</a></center>
+        <p>
+        <div id="mdrefs" class="collapse">
+          <div class="list-group">
+            <a href="http://www.postscapes.com/wireless-biometric-patch-healthpatch-md/" class="list-group-item list-group-item-action">1. Ted Burnham. HealthPatch MD. (accessed February 2017)</a>
+            <a href="http://www.cathlabdigest.com/article/Vital-Connect-HealthPatch-MD-Biosensor-Receives-FDA-Clearance" class="list-group-item list-group-item-action text-left">2. Vital Connect HealthPatch MD Biosensor Receives FDA Clearance. Cath Lab Digest 2014; 22(10): (accessed February 2017)</a>
+            <a href="http://www.asylumpr.com/wp-content/uploads/video/pdf_288.pdf" class="list-group-item list-group-item-action">3. Clinical-Grade Biosensor. Today's Medical Developments. (accessed February 2017)</a>
+            <a href="https://vitalconnect.com/wp-content/uploads/2017/02/Chan2013EMBC_VitalConnectPatch.pdf" class="list-group-item list-group-item-action text-left">4. Alexander M. Chan, Nandakumar Selvaraj, Nima Ferdosi, and Ravi Narasimhan. Wireless Patch Sensor for Remote Monitoring of Heart Rate, Respiration, Activity, and Falls. 2013;  (accessed February 2017)</a>
+            <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6346853" class="list-group-item list-group-item-action">5. Ravi Narasimhan. Skin-contact sensor for automatic fall detection. 2012; (accessed February 2017)</a>
+            <a href="http://www.imedicalapps.com/2014/02/vital-connect-wearable-biosensor-healthpatch/" class="list-group-item list-group-item-action">Photo: imedicalapps.com</a>
+            <a href="http://www.dailymail.co.uk/sciencetech/article-2604543/Glass-without-glasses-Google-patents-smart-contact-lens-CAMERA-built-in.html" class="list-group-item list-group-item-action">Photo: dailymail.co.uk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+   <div id="helius">
+    <div class="container-fluid bg-3 text-center">
+        <h2 class="text-center" id="helius">Helius</h2>
+        <img src="images/helius.jpg" class="img-responsive" alt="Helius Pill" style="width: 40%; height: 40%">
+          <p>
+        <h4 class="text-center">What is Helius?</h3>
+        <p>One of the most exciting launches in healthcare technology is that of the Helius pill which is the world’s first ever FDA approved digestible microchip. It uses a small patch (Proteus Personal Monitor) worn on the body together with sensor-enabled pills and a cloud services that allows for access to real-time information on the user’s health. <sup>[1]</sup> The pills are composed of tiny sensors made mostly of silicon that are covered in magnesium and copper so they react with the user’s stomach acid and generator enough power through this reaction to send a time-stamped signal to the patch. This information is then forwarded to the user’s smartphone using Bluetooth. The encrypted data is then forwarded to a secure database that can be reviewed by the user’s doctor or relatives. The pill’s main use is to encourage and confirm that users are complying with their drug regimen as the total cost incurred due to poor compliance is near $300 billion annually. Therefore the information sent to the patch includes the type of medication taken and amount of dosage as well as the time of ingestion. <sup>[2]</sup> </p>
+        <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#demo3">Read more</button>
+        <div id="demo3" class="panel-collapse collapse">
+          <p>
+        <h4 class="text-center">How does the Helius pill work?</h3>
+        <p>The technology works on the basis of ingestible event markers (essentially sand grain-sized microchips) that can be incorporated into pills. The minuscule IEM, attached to an inert pharmaceutical tablet, is designed to send a time-stamped confirmation of ingestion as a unique identifier to the Proteus patch worn outside the body. The signal is communicated via volume conduction communication (also known as intra-body communication), a form of communication that uses the human body as the medium of transmission for electrical signals. <sup>[4]</sup></p>
+<p>
+  <img src="images/iemdiagram.png" class="img-responsive" alt="IEM Diagram" style="width: 30%; height: 30%">
+  <p>
+        <h4 class="text-center">What is inside the IEM sensor?</h3>
+        <p>The sensor consists of three main components: the active layers, the integrated circuit and the insulating skirt disk. <sup>[3]</sup> The active layers are thin films of magnesium and cuprous chloride. Underneath there is a gold layer that acts as a current collector. Together, these layers, upon contact with gastric fluid, produce a battery that powers the device. The code transmitted by the pill to the patch consists of a binary number representing the medication and dosage. In order to transmit this code, the integrated circuit modules the discharge current between high and low levels at frequencies chosen specifically to avoid stimulating any unwanted cells.<br/><a href="#" class="scroll-top back-to-top">&uarr;</a> </p>
+        <center><a href="#heliusrefs" class="btn btn-outline-info" data-toggle="collapse">References</a></center>
+        <p>
+        <div id="heliusrefs" class="collapse">
+          <div class="list-group">
+            <a href="http://www.postscapes.com/smart-sensor-pills-helius/" class="list-group-item list-group-item-action">1. Postscapes. Proteus Pills. (accessed February 2017)</a>
+            <a href="https://innovatemedtec.com/content/proteus-digital-health-shows-reliability-of-its-helius-smart-pills---" class="list-group-item list-group-item-action text-left">2. IMT Digital Health. Proteus Digital Health Shows Reliability of its Helius Smart Pills. (accessed February 2017)</a>
+            <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6861446&tag=1" class="list-group-item list-group-item-action text-left">3. Hooman Hafezi, Timothy L. Robertson, Greg D. Moon, Kit-Yee Au-Yeung, Mark J. Zdeblick, and George M. Savage. An Ingestible Sensor for Measuring Medication Adherence. IEEE Transactions on Biomedical Engineering 2015; 62(1): (accessed February 2017)</a>
+            <a href="http://e-collection.library.ethz.ch/eserv/eth:29911/eth-29911-02.pdf" class="list-group-item list-group-item-action text-left">4. Marc Simon Wegmüller. Intra-Body Communication for Biomedical Sensor Networks. 2007; (accessed February 2017)</a>
+            <a href="http://www.bbc.co.uk/news/business-23620996" class="list-group-item list-group-item-action">Photo: bbc.co.uk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="google">
+    <div class="container-fluid bg-4 text-center">
+        <h2 class="text-center" id="google">Google Smart Contact Lenses</h2>
+        <img src="images/googlelens.jpg" class="img-responsive" alt="Google Smart Contact Lenses" style="width: 40%; height: 40%">
+<p>
+        <h4 class="text-center">What are Google smart contact lenses?</h3>
+        <p>Google smart contact lenses may not be available yet but they are certain to be one of the innovative gadgets of the next decade. Announced in 2014, the lenses aim to help diabetics by constantly measuring the glucose levels in their tears. In addition, the lens can also help focus the user’s vision where required. <sup>[1]</sup> The lens is composed of a wireless chip and a tiny glucose sensor. A minuscule hole in the lens allows the tear fluid to touch the sensor, which lies in between two soft layers of lens material, and allow it to measure blood glucose levels. In the same layer as the sensor, there is also a wireless antenna thinner than a human hair which sends information to the wireless device through the wireless technology RFID (radio-frequency identification). This antenna gathers, reads and analysis data that will be sent to the device; the current prototypes produce one reading per second. In the future, tiny LED lights may be added to notify users when glucose levels exceed a certain threshold. <sup>[4]</sup></p>
+        <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#demo4">Read more</button>
+        <p>
+        <div id="demo4" class="panel-collapse collapse">
+
+            <img src="images/lensdiagram.jpg" class="img-responsive" alt="Google Smart Contact Lens Diagram" style="width: 20%; height: 20%">
+            <p>
+        <h4 class="text-center">What is radio-frequency identification?</h3>
+        <p>Radio-frequency identification is the use of radio waves to read and analyse information stored on a tag attached to an object. <sup>[2]</sup> The tags contain electronically stored information and can either be active, passive or battery-assisted passive. An active tag has a local power source (e.g. a battery) and transmits its ID signal periodically. A battery-assisted passive tag also has a small battery but is only activated when an RFID reader is nearby. A passive tag has no battery, rendering it cheaper and smaller, but instead the tag uses radio energy transmitted by the RFID reader. However, a passive tag requires a thousand times stronger power level to transmit a signal. RFID tags contain an integrated circuit and an antenna, as well as fixed or programmable logic used for processing the transmission and sensor data.</p>
+        <p>The electronically stored information in tags is accessed used an RFID reader which transmits an encoded radio signal to interrogate the tag. The tag receives the message and sends its unique ID back, along with any other required information. This allows the RFID reader to discriminate among several tags that may be within range and read them simultaneously. <sup>[3]</sup><br/><a href="#" class="scroll-top back-to-top">&uarr;</a></p>
+        <center><a href="#googlerefs" class="btn btn-outline-info" data-toggle="collapse">References</a></center>
+        <p>
+        <div id="googlerefs" class="collapse">
+          <div class="list-group">
+            <a href="https://en.wikipedia.org/wiki/Google_Contact_Lens" class="list-group-item list-group-item-action">1. Wikipedia. Google Contact Lens. (accessed February 2017)</a>
+            <a href="https://en.wikipedia.org/wiki/Radio-frequency_identification" class="list-group-item list-group-item-action">2. Wikipedia. Radio-frequency identification. (accessed February 2017)</a>
+            <a href="http://www.technovelgy.com/ct/Technology-Article.asp?ArtNum=1" class="list-group-item list-group-item-action">3. Technovelgy. What is RFID? (accessed February 2017)</a>
+            <a href="https://googleblog.blogspot.co.uk/2014/01/introducing-our-smart-contact-lens.html" class="list-group-item list-group-item-action">4.	Brian Otis and Babak Parviz. Introducing our smart contact lens project. (accessed February 2017)</a>
+            <a href="https://www.forbes.com/sites/leoking/2014/07/15/google-smart-contact-lens-focuses-on-healthcare-billions/#aae0d34217f4" class="list-group-item list-group-item-action">Photo: forbes.com</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+     <!-- Scrolling function -->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+     $(document).ready(function() {
+    // navigation click actions
+    $('.scroll-link').on('click', function(event){
+    event.preventDefault();
+    var sectionID = $(this).attr("data-id");
+    scrollToID('#' + sectionID, 1000);
+    });
+    // scroll to top action
+      $('.scroll-top').on('click', function(event) {
+      event.preventDefault();
+      $('html, body').animate({scrollTop:0}, 'slow');
+  });
+
+});
+// scroll function
+function scrollToID(id, speed){
+  var offSet = 50;
+  var targetOffset = $(id).offset().top - offSet;
+  var mainNav = $('#main-nav');
+  $('html,body').animate({scrollTop:targetOffset}, speed);
+  if (mainNav.hasClass("open")) {
+    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+    mainNav.removeClass("open");
+  }
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+  </body>
+</html>
